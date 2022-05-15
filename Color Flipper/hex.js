@@ -1,0 +1,17 @@
+const hex = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+// get element references from the dom
+const btn = document.getElementById("btn");
+const color = document.querySelector(".color");
+// adding event listener to button
+btn.addEventListener('click', function(){
+let hexColor = '#';
+    for(let i = 0; i < 6; i++){
+        hexColor += hex[getRandomNumber()]
+    }
+color.textContent = hexColor;
+document.body.style.backgroundColor = hexColor;
+});
+// Generating a random number using math
+function getRandomNumber(){
+    return Math.floor(Math.random() * hex.length);
+}
